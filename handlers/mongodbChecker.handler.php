@@ -1,6 +1,8 @@
 <?php
+require_once BASE_PATH . '/utils/envSetter.util.php';
+
 try {
-    $mongo = new MongoDB\Driver\Manager("mongodb://host.docker.internal:23569");
+    $mongo = new MongoDB\Driver\Manager($mongoConfig['uri']);
 
     $command = new MongoDB\Driver\Command(["ping" => 1]);
     $mongo->executeCommand("admin", $command);

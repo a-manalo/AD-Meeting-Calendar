@@ -1,10 +1,11 @@
 <?php
+require_once BASE_PATH . '/utils/envSetter.util.php';
 
-$host = "host.docker.internal";
-$port = "5556";
-$username = "user";
-$password = "password";
-$dbname = "meetcalendardb";
+$host = $pgConfig['host'];
+$port = $pgConfig['port'];
+$username = $pgConfig['user'];
+$password = $pgConfig['pass'];
+$dbname = $pgConfig['db'];
 
 $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
 
