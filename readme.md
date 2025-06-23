@@ -95,6 +95,11 @@ AD-Meeting-Calendar
 |   └─ name.component.php
 |   └─ templates
 |      └─ name.component.php
+└─ database
+|   └─ users.model.sql
+|   └─ meetings.model.sql
+|   └─ meeting_users.model.sql
+|   └─ tasks.model.sql
 └─ handlers
 |   └─ mongodbChecker.handler.php
 |   └─ postgreChecker.handler.php
@@ -113,6 +118,7 @@ AD-Meeting-Calendar
 └─ staticDatas
 |  └─ name.staticdata.php
 └─ utils
+|   └─ dbResetPostgresql.util.php
 |   └─ envSetter.util.php
 |   └─ htmlEscape.util.php
 └─ vendor
