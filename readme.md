@@ -48,17 +48,24 @@
 
 ## Overview
 
-This project is a meeting calendar. It is the 3rd activity for the course, CCS0043: Application Development. The first main objective is to implement database in the project.
+This project is a meeting calendar, built using the languages, PHP, HTML, and CSS. It is the 3rd activity for the course, CCS0043: Application Development. The purpose of this project is for managing meetings.
 
 ### Key Components
 
-- Database Connection Status
+- Home Page:
+  - Welcome Message
+  - Database Connection Status
+- Login Page:
+  - Login Form
+- Database Setup and Implementation
+- Authorization Features
 
 ### Technology
 
 #### Language
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 #### Databases
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -94,34 +101,42 @@ AD-Meeting-Calendar
 └─ components
 |   └─ name.component.php
 |   └─ templates
-|      └─ name.component.php
+|      └─ head.component.php
+|      └─ nav.component.php
+|      └─ foot.component.php
 └─ database
 |   └─ users.model.sql
 |   └─ meetings.model.sql
 |   └─ meeting_users.model.sql
 |   └─ tasks.model.sql
 └─ handlers
+|   └─ auth.handler.php
 |   └─ mongodbChecker.handler.php
 |   └─ postgreChecker.handler.php
 └─ layouts
-|   └─ name.layout.php
+|   └─ main.layout.php
 └─ pages
-|  └─ pageName
+|  └─ login
 |     └─ assets
 |     |  └─ css
-|     |  |  └─ name.css
-|     |  └─ img
-|     |  |  └─ name.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ name.js
+|     |  |  └─ login.css
+|     └─ index.php
+|  └─ logout
 |     └─ index.php
 └─ staticDatas
-|  └─ name.staticdata.php
+|  └─ users.staticData.php
+|  └─ meetings.staticData.php
+|  └─ meeting_users.staticData.php
+|  └─ tasks.staticData.php
 └─ utils
+|   └─ auth.util.php
 |   └─ dbResetPostgresql.util.php
+|   └─ dbSeederPostgresql.util.php
+|   └─ dbMigratePostgresql.util.php
 |   └─ envSetter.util.php
 |   └─ htmlEscape.util.php
 └─ vendor
+└─ .dockerignore
 └─ .gitignore
 └─ bootstrap.php
 └─ composer.yaml
@@ -135,6 +150,6 @@ AD-Meeting-Calendar
 
 ## Resources
 
-| Title        | Purpose                                                                       | Link          |
-| ------------ | ----------------------------------------------------------------------------- | ------------- |
-| N/A          | N/A                                                                           | N/A           |
+| Title | Purpose | Link |
+| ------ | ----------------------------------------------------------------------------- | ------------- |
+| ChatGPT | Assisted with creating dummy data, code structure, and debugging. | https://chatgpt.com/ |
