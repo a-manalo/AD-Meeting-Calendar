@@ -6,6 +6,13 @@ require 'vendor/autoload.php';
 require 'bootstrap.php';
 require_once UTILS_PATH . '/envSetter.util.php';
 
+// Adding the database host and connecting
+$host     = $pgConfig['host'];
+$port     = $pgConfig['port'];
+$username = $pgConfig['user'];
+$password = $pgConfig['pass'];
+$dbname   = $pgConfig['db'];
+
 // Connect to PostgreSQL
 $dsn = "pgsql:host={$pgConfig['host']};port={$pgConfig['port']};dbname={$pgConfig['db']}";
 $pdo = new PDO($dsn, $pgConfig['user'], $pgConfig['pass'], [
@@ -40,5 +47,6 @@ echo "Truncating tables…\n";
 foreach (['users', 'meetings', 'meeting_users', 'tasks'] as $table) {
     $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
 }
+echo "Tables successfully truncated.\n";
 
 ?>
